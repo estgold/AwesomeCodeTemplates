@@ -32,3 +32,30 @@ namespace FastBoost.Controllers
         }
     }
 }
+
+
+/* 
+source - https://stackoverflow.com/questions/20144364/basic-authentication-in-asp-net-mvc-5
+It can be used to put under Basic Authentication a whole controller:
+
+[BasicAuthenticationAttribute("your-username", "your-password", 
+BasicRealm = "your-realm")]
+public class HomeController : BaseController
+{
+        ...
+}
+
+or a specific ActionResult:
+
+public class HomeController : BaseController
+{
+    [BasicAuthenticationAttribute("your-username", "your-password", 
+        BasicRealm = "your-realm")]
+    public ActionResult Index() 
+    {
+        ...
+    }
+}
+
+
+ */
